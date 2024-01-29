@@ -6,6 +6,7 @@ import { FormBewerbungComponent } from './form-bewerbung/form-bewerbung.componen
 import { FormFirmaComponent } from './form-firma/form-firma.component';
 import { EditFirmaComponent } from './edit-firma/edit-firma.component';
 import { CreateFirmaComponent } from './create-firma/create-firma.component';
+import { AdminRoutingModule } from './admin-routing.module';
 
 
 
@@ -19,7 +20,8 @@ import { CreateFirmaComponent } from './create-firma/create-firma.component';
     CreateFirmaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AdminRoutingModule
   ]
 })
 export class AdminModule { }

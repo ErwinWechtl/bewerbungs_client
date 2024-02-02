@@ -1,1 +1,9 @@
-<p>list-firma works!</p>
+<h1>Firmen</h1>
+<ul class="list-firma" *ngIf="$firmen | async as firmen">
+    <li *ngFor="let firma of firmen">
+        <we-item-firma [firma]="firma"></we-item-firma>
+    </li>
+    <li *ngIf="!firmen.length">
+        Keine Firmen gespeichert
+    </li>
+</ul>

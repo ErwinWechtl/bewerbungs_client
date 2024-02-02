@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-.mycolor {
-    background-color: yellow;
+h1 {
+    text-align: center;
 }
+ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+.list-firma a {
+    text-decoration: none;
+    color: inherit;
+  }
+.list-firma a:hover {
+    color: rgba(0,0,0,.8);
+  }
+.list-firma .list-item  {
+    display: block;
+    border-bottom: 1px solid rgba(34,36,38,.15);
+    padding: 0 1em;
+  }
+
+

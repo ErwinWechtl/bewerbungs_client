@@ -6,6 +6,50 @@ ul {
     padding: 0;
     list-style: none;
   }
+
+.red {
+    background-color: #db2828 !important;
+    color: #ffffff !important;
+  }
+.red:hover {
+    background-color: yellow !important;
+  }
+
+button, a.button {
+    box-sizing: inherit;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    border: none;
+    vertical-align: initial;
+    background: #e0e1e2 none;
+    color: rgba(0,0,0,.6);
+    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    margin: .25em .25em 0 0;
+    padding: .8em 1.5em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .3rem;
+    user-select: none;
+    transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: inset 0 0 0 1px transparent,inset 0 0 0 0 rgba(34,36,38,.15);
+    font-size: .8rem;
+  }
+  button:hover, a.button:hover {
+    background-color: yellow;
+  }
+  button:disabled, a.button:disabled, button:disabled:hover, a.button:disabled:hover {
+    cursor: not-allowed !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    color: #888888 !important;
+  }
   
 .list-firma a {
     text-decoration: none;
@@ -17,7 +61,7 @@ ul {
 .list-firma .list-item  {
     display: block;
     border-bottom: 1px solid rgba(34,36,38,.15);
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
   }
 
 

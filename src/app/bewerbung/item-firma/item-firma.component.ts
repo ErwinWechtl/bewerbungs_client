@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { Firma } from 'src/app/shared/firma';
 import { FirmaService } from 'src/app/shared/firma.service';
 
@@ -10,4 +10,18 @@ import { FirmaService } from 'src/app/shared/firma.service';
 })
 export class ItemFirmaComponent {
   @Input() firma?: Firma;
+
+  constructor(
+    private service: FirmaService,
+    private router: Router
+  ) { }
+
+  deleteFirma(firma: Firma) {
+    if(confirm("Are you sure to delete firma with URL " + firma.webseite)) {
+      this.service.delete(firma.id).subscribe(() => {
+        this.router.navigateByUrl('/bewerbung/list-firma');
+      })
+      }
+  }
+
 }

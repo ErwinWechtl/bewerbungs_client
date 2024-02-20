@@ -12,7 +12,7 @@ export class CreateFirmaComponent {
 
   firma: Firma = {
     id: '',
-    webseite: ''
+    name: ''
   }
 
   @Output() submitFirma = new EventEmitter<Firma>();

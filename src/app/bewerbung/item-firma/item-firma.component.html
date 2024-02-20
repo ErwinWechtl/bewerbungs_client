@@ -1,6 +1,7 @@
 <div *ngIf="firma" class="list-item">
     <a [routerLink]="firma.id">
-        <h2>{{firma.webseite}}</h2>
+        <h2>{{firma.name}}</h2>
+        <p *ngIf="firma.webseite">Webseite: {{firma.webseite}}</p>
         <p *ngIf="firma.ansprech_partner">Ansprechpartner: {{firma.ansprech_partner}}</p>
         <p *ngIf="firma.email">Email: {{firma.email}}</p>
         <p *ngIf="firma.sonstiges">{{firma.sonstiges}}</p>

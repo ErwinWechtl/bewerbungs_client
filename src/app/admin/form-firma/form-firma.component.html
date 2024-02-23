@@ -1,1 +1,24 @@
-<p>form-firma works!</p>
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div *ngIf="form.controls.id.getRawValue()!=''">
+        <label for="id">ID:</label>
+        <input id="id" formControlName="id">
+    </div>
+    
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name">
+    
+    <label for="webseite">Webseite:</label>
+    <input id="webseite" formControlName="webseite">
+    
+    <label for="ansprechPartner">Ansprchpartner:</label>
+    <input id="ansprechPartner" formControlName="ansprechPartner">
+    
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email">
+    
+    <label for="sonstiges">Sonstiges:</label>
+    <input id="sonstiges" formControlName="sonstiges">
+
+    <button type="submit" [disabled]="form.invalid">Save</button>
+    
+</form>

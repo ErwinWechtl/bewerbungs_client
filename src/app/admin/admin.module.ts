@@ -7,9 +7,8 @@ import { FormFirmaComponent } from './form-firma/form-firma.component';
 import { EditFirmaComponent } from './edit-firma/edit-firma.component';
 import { CreateFirmaComponent } from './create-firma/create-firma.component';
 import { AdminRoutingModule } from './admin-routing.module';
-import { FormsModule } from '@angular/forms';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { LocalIsoDateValueAccessor } from 'angular-date-value-accessor';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FormsModule
+    ReactiveFormsModule,
+    LocalIsoDateValueAccessor
   ]
 })
 export class AdminModule { }

@@ -19,6 +19,10 @@ export class ItemFirmaComponent {
   deleteFirma(firma: Firma) {
     if(confirm("Are you sure to delete firma with URL " + firma.webseite)) {
       this.service.delete(firma.id).subscribe(() => {
+        this.router.routeReuseStrategy.shouldReuseRoute = function () {
+          return false;
+        }
+        this.router.onSameUrlNavigation = 'reload';
         this.router.navigateByUrl('/bewerbung/list-firma');
       })
       }

@@ -1,24 +1,3 @@
-<form (ngSubmit)="submitForm(firma)" #form="ngForm">
-    <div *ngIf="firma.id!=''">
-        <label for="id">ID:</label>
-        <input name="id" id="id" [(ngModel)]="firma.id" readonly>
-    </div>
-    
-    <label for="name">Name:</label>
-    <input name="name" id="name" [(ngModel)]="firma.name" required="true">
-    
-    <label for="webseite">Webseite:</label>
-    <input name="webseite" id="webseite" [(ngModel)]="firma.webseite">
-    
-    <label for="ansprech_partner">Ansprchpartner:</label>
-    <input name="ansprech_partner" id="ansprech_partner" [(ngModel)]="firma.ansprech_partner">
-    
-    <label for="email">Email:</label>
-    <input name="email" id="email" [(ngModel)]="firma.email">
-    
-    <label for="sonstiges">Sonstiges:</label>
-    <input name="sonstiges" id="sonstiges" [(ngModel)]="firma.sonstiges">
+<h1>Create Firma</h1>
+<we-form-firma (submitFirma)="create($event)"></we-form-firma>
 
-    <button type="submit" [disabled]="form.invalid">Save</button>
-    
-</form>

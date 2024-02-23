@@ -10,16 +10,10 @@ import { FirmaService } from 'src/app/shared/firma.service';
 })
 export class CreateFirmaComponent {
 
-  firma: Firma = {
-    id: '',
-    name: ''
-  }
-
-  @Output() submitFirma = new EventEmitter<Firma>();
-
   constructor(private firmaService: FirmaService, private router: Router) { }
 
-  submitForm(firma: Firma) {
+  create(firma: Firma) {
+    alert("Ansprechpartner: " + firma.ansprechPartner);
     this.firmaService.create(firma).subscribe(createdFirma => {
       this.router.navigateByUrl("/bewerbung/list-firma");
      });

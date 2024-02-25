@@ -1,1 +1,7 @@
-<p>edit-firma works!</p>
+<h1>Edit Firma</h1>
+
+<we-form-firma
+    *ngIf="firma$ | async as firma"
+    [firma]="firma"
+    (submitFirma)="update($event)">
+</we-form-firma>

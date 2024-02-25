@@ -17,7 +17,7 @@ export class ItemFirmaComponent {
   ) { }
 
   deleteFirma(firma: Firma) {
-    if(confirm("Are you sure to delete firma with URL " + firma.webseite)) {
+    if(confirm("Are you sure to delete Firma  '" + firma.name + "'")) {
       this.service.delete(firma.id).subscribe(() => {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
           return false;

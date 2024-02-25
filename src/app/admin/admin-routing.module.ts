@@ -12,8 +12,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'create-bewerbung', pathMatch: 'full'},
       {path: 'create-bewerbung', component: CreateBewerbungComponent},
       {path: 'create-firma', component: CreateFirmaComponent},
-      {path: 'edit-bewerbung', component: EditBewerbungComponent},
-      {path: 'edit-firma', component: EditFirmaComponent}
+      {path: 'edit-bewerbung/:id', component: EditBewerbungComponent},
+      {path: 'edit-firma/:id', component: EditFirmaComponent}
     ]
   }
 ];

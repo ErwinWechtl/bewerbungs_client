@@ -1,4 +1,9 @@
 <h1>Firmen</h1>
+
+<a class="button" [routerLink]="['/bewerbung/list-firma']">
+    Hinzufügen
+</a>    
+
 <ul class="list-firma" *ngIf="$firmen | async as firmen">
     <li *ngFor="let firma of firmen">
         <we-item-firma [firma]="firma"></we-item-firma>

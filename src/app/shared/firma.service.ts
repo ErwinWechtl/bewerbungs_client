@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable, catchError, of } from 'rxjs';
 
 import { Firma } from './firma';
 
@@ -28,7 +28,9 @@ export class FirmaService {
   }
 
   update(firma: Firma): Observable<Firma> {
-    return this.httpClient.put<Firma>(this.apiUrl + "/" + firma.id, firma);
+    const observableFirma: Observable<Firma> = this.httpClient.put<Firma>(this.apiUrl + "/" + firma.id, firma);
+    observableFirma.subscribe(error => console.log('Fehler: ' + error));
+    return observableFirma;
   }
 
   delete(id: String): Observable<unknown> {

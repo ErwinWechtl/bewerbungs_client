@@ -1,7 +1,9 @@
 export interface Bewerbung {
     id: string;
     sentTo: string;
+	ansprechPartner?: string;
     anschreiben?: string;
-    sonstiges?: string;
-  
+    status: number;
+    letzterKontakt: string;
+    sonstiges?: string;  
 }

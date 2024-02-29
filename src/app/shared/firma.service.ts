@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { EMPTY, Observable, catchError, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { Firma } from './firma';
 
@@ -19,7 +19,7 @@ export class FirmaService {
     return this.httpClient.get<Firma[]>(this.apiUrl);
   }
 
-  get(id: String): Observable<Firma> {
+  get(id: string): Observable<Firma> {
     return this.httpClient.get<Firma>(this.apiUrl + "/" + id);
   }
 
@@ -33,7 +33,7 @@ export class FirmaService {
     return observableFirma;
   }
 
-  delete(id: String): Observable<unknown> {
+  delete(id: string): Observable<unknown> {
     return this.httpClient.delete(this.apiUrl + "/" + id);
   }
 

@@ -10,6 +10,8 @@ export class FormBewerbungComponent {
   bewerbung: Bewerbung = {
     id: '',
     sentTo: '',
+    letzterKontakt: '',
+    status: 1
   }
 
 }

@@ -1,1 +1,26 @@
-<p>show-firma works!</p>
+<div *ngIf="firma$ | async as firma" class="list-item">
+    
+    <h2>{{firma.name}}</h2>
+    <p *ngIf="firma.webseite">Webseite: {{firma.webseite}}</p>
+    <p *ngIf="firma.ansprechPartner">Ansprechpartner: {{firma.ansprechPartner}}</p>
+    <p *ngIf="firma.email">Email: {{firma.email}}</p>
+    <p *ngIf="firma.sonstiges">{{firma.sonstiges}}</p>
+    <button class="red" (click)="deleteFirma(firma)">
+        Firma Löschen
+    </button>
+    <a class="button" [routerLink]="['/admin/edit-firma', firma.id]">
+        Firma Bearbeiten
+    </a>      
+
+    <ul class="list-firma" *ngIf="bewerbungen$ | async as bewerbungen">
+        <li *ngFor="let bewerbung of bewerbungen">
+            <we-item-bewerbung [firma]="firma" [bewerbung]="bewerbung"></we-item-bewerbung>
+        </li>
+        <li *ngIf="!bewerbungen.length">
+            Keine Bewerbungen über diese Firma gespeichert
+        </li>
+    </ul>
+
+</div>
+
+

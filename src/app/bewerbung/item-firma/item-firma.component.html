@@ -7,10 +7,10 @@
         <p *ngIf="firma.sonstiges">{{firma.sonstiges}}</p>
     </a>
     <button class="red" (click)="deleteFirma(firma)">
-        Löschen
+        Firma Löschen
     </button>
     <a class="button" [routerLink]="['/admin/edit-firma', firma.id]">
-        Bearbeiten
-    </a>    
+        Firma Bearbeiten
+    </a>      
 </div>
 

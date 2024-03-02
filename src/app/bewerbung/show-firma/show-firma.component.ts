@@ -19,36 +19,14 @@ export class ShowFirmaComponent {
     private firmaService: FirmaService,
     private bewerbungService: BewerbungService,
     private activatedRoute: ActivatedRoute,
-//    private route: ActivatedRoute,
     private router: Router
   ) { 
     const firmaId = this.activatedRoute.snapshot.paramMap.get('id');
     this.firma$ = firmaService.get(firmaId!);
     this.bewerbungen$ = this.bewerbungService.getAll(firmaId!);
-
-//    this.activatedRoute.paramMap.subscribe(params =>{
-//      const firmaId = params.get('id');
-//      if (firmaId) {
-//        firmaService.get(firmaId).subscribe(aFirma => {this.firma = aFirma});
-//        this.getBewerbungen();
-//      }
-//    })
-//    console.log("constructor: " + this.firma);
+    this.bewerbungen$.forEach(bewerbungsArray => alert("sentTo: " + bewerbungsArray[0].sentto));
   }
 
-  // getBewerbungen() {
-  //   console.log("getBewerbungen von Firma " + this.firma);
-  //   if (this.firma) {
-  //     console.log("getBewerbungen von Firma in if" + this.firma.name);
-  //     this.bewerbungService.getAll(this.firma.id).subscribe(bewerbung => {console.log(bewerbung); this.bewerbungen?.push(bewerbung[0])});
-  //     if (this.bewerbungen) {
-  //       alert("getBewerbungen return: " + this.bewerbungen);
-  //       return this.bewerbungen;
-  //     }
-  //    }
-  //    alert("getBewerbungen returned empty array ");
-  //    return <Bewerbung[]>[];
-  // }
 
   deleteFirma(firma: Firma) {
     if(confirm("Are you sure to delete Firma  '" + firma.name + "'")) {

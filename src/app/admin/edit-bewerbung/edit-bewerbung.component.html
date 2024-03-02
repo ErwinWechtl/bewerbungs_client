@@ -1,1 +1,8 @@
-<p>edit-bewerbung works!</p>
+<h1>Edit Bewerbung</h1>
+
+<we-form-bewerbung
+    *ngIf="bewerbung$ | async as bewerbung"
+    [bewerbung]="bewerbung"
+    (submitBewerbung)="update($event)"
+    >
+</we-form-bewerbung>

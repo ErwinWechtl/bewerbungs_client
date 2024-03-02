@@ -21,7 +21,7 @@ export class ItemBewerbungComponent {
 
 
   deleteBewerbung(bewerbung: Bewerbung) {
-    if(confirm("Are you sure to delete Bewerbung  '" + bewerbung.sentTo + "'")) {
+    if(confirm("Are you sure to delete Bewerbung  '" + bewerbung.sentto + "'")) {
       this.service.delete(this.firma!.id, bewerbung.id).subscribe(() => {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
           return false;

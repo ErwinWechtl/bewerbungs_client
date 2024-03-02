@@ -9,11 +9,15 @@ const routes: Routes = [
   {
     path: 'admin', 
     children: [
-      {path: '', redirectTo: 'create-bewerbung', pathMatch: 'full'},
-      {path: 'create-bewerbung', component: CreateBewerbungComponent},
-      {path: 'create-firma', component: CreateFirmaComponent},
-      {path: 'edit-bewerbung/:id', component: EditBewerbungComponent},
-      {path: 'edit-firma/:id', component: EditFirmaComponent}
+      {path: '', redirectTo: 'firma', pathMatch: 'full'},
+      {path: 'firma',
+      children: [
+        {path: '', component: CreateFirmaComponent},
+        {path: ':id', component: EditFirmaComponent},
+        {path: ':firmaId/bewerbung', component: CreateBewerbungComponent},
+        {path: ':firmaId/bewerbung/:id', component: EditBewerbungComponent},
+        ]
+      }
     ]
   }
 ];

@@ -14,7 +14,7 @@ const routes: Routes = [
       {path: 'list-firma', component: ListFirmaComponent},
       {path: 'list-firma/:id', component: ShowFirmaComponent},
       {path: 'show-bewerbung', component: ShowBewerbungComponent},
-      {path: 'show-firma', component: ShowFirmaComponent},
+      {path: 'show-firma/:id', component: ShowFirmaComponent},
     ]
 
   }

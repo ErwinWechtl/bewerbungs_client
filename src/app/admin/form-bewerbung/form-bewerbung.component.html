@@ -1,1 +1,27 @@
-<p>form-bewerbung works!</p>
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div *ngIf="form.controls.id.getRawValue()!=''">
+        <label for="id">ID:</label>
+        <input id="id" formControlName="id">
+    </div>
+    
+    <label for="sentto">sent to:</label>
+    <input id="sentto" formControlName="sentto">
+    
+    <label for="ansprechPartner">Ansprchpartner:</label>
+    <input id="ansprechPartner" formControlName="ansprechPartner">
+    
+    <label for="letzterKontakt">Letzter Kontakt:</label>
+    <input id="letzterKontakt" formControlName="letzterKontakt">
+    
+    <label for="status">Status:</label>
+    <input id="status" formControlName="status">
+    
+    <label for="anschreiben">Status:</label>
+    <input id="anschreiben" formControlName="status">
+    
+    <label for="sonstiges">Sonstiges:</label>
+    <input id="sonstiges" formControlName="sonstiges">
+
+    <button type="submit" [disabled]="form.invalid">Save</button>
+    
+</form>

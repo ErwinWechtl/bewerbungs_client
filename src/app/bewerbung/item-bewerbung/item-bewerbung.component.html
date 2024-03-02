@@ -1,6 +1,6 @@
 <div *ngIf="bewerbung" class="list-item">
         <h2>{{bewerbung.ansprechPartner}}</h2>
-        <p *ngIf="bewerbung.sentTo">Sent to: {{bewerbung.sentTo}}</p>
+        <p *ngIf="bewerbung.sentto">Sent to: {{bewerbung.sentto}}</p>
         <p *ngIf="bewerbung.status">Status: {{bewerbung.status}}</p>
         <p *ngIf="bewerbung.letzterKontakt">letzter Kontakt: {{bewerbung.letzterKontakt}}</p>
         <p *ngIf="bewerbung.anschreiben">Anschreiben: {{bewerbung.anschreiben}}</p>
@@ -8,7 +8,7 @@
     <button class="red" (click)="deleteBewerbung(bewerbung)">
         Bewerbung Löschen
     </button>
-    <a class="button" [routerLink]="['/admin/edit-bewerbung', bewerbung.id]">
+    <a class="button" [routerLink]="['/admin/firma', firma?.id, 'bewerbung', bewerbung.id]">
         Bewerbung Bearbeiten
     </a>      
 </div>

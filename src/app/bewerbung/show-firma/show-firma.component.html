@@ -8,8 +8,11 @@
     <button class="red" (click)="deleteFirma(firma)">
         Firma Löschen
     </button>
-    <a class="button" [routerLink]="['/admin/edit-firma', firma.id]">
+    <a class="button" [routerLink]="['/admin/firma', firma.id]">
         Firma Bearbeiten
+    </a>      
+    <a class="button" [routerLink]="['/admin/firma', firma.id, 'bewerbung']">
+        Bewerbung hinzufügen
     </a>      
 
     <ul class="list-firma" *ngIf="bewerbungen$ | async as bewerbungen">

@@ -13,10 +13,13 @@ export class EditFirmaComponent {
   firma$: Observable<Firma>;
 
   constructor(private service: FirmaService, private route: ActivatedRoute, private router: Router) {
+    alert("constuctorvon edit Firma");
     this.firma$ = this.route.paramMap.pipe(
       map(params => params.get('id')!),
       switchMap(id => this.service.get(id))
       );
+    alert("constuctorvon edit Firma end");
+
   }
 
   update(firma: Firma) {

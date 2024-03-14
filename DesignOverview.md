@@ -2,11 +2,12 @@
 ## Model
 - [Recruiters and companies to which you apply](src/app/shared/firma.ts)
 - [Applications](src/app/shared/bewerbung.ts)
--- A recuiter or a company can have 0 - n applications
+
+A recuiter or a company can have 0 - n applications
 ## Modules
 The App is devides in two modules: 
--- [the admin module for creating recuiters, companies and applications](src/app/admin/admin.module.ts)
--- [the module for viewing lists of recuiters, companies and applications](src/app/bewerbung/bewerbung.module.ts)
+- [the admin module for creating recuiters, companies and applications](src/app/admin/admin.module.ts)
+- [the module for viewing lists of recuiters, companies and applications](src/app/bewerbung/bewerbung.module.ts)
 in the shared folder there is the [service for recuiters and companies](src/app/shared/firma.service.ts) and the [application service](src/app/shared/bewerbung.service.ts)
 ## Components for viewing data
 - [List of recuiters and companies]() with [Items for each recuiter and company]()

@@ -29,7 +29,6 @@ export class FormBewerbungComponent {
   })
 
   submitForm() {
-    alert("submitForm");
     this.submitBewerbung.emit(this.form.getRawValue());
   }
 

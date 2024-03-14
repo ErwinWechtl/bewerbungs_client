@@ -35,12 +35,26 @@ button, a.button {
     font-size: .8rem;
   }
 button:hover, a.button:hover {
-    background-color: yellow;
+    background-color: grey;
   }
 button:disabled, a.button:disabled, button:disabled:hover, a.button:disabled:hover {
     cursor: not-allowed !important;
     background-color: rgba(0, 0, 0, 0.05) !important;
     color: #888888 !important;
+  }
+
+form {
+  display: grid;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
   }
   
 /* Navbar Style */
@@ -81,7 +95,7 @@ nav a {
 }
 nav a:hover {
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.03);
+  background: grey;
   color: rgba(0, 0, 0, 0.95);
 }
 nav a.active {
@@ -107,7 +121,7 @@ nav .actions button {
     color: #ffffff !important;
   }
 .red:hover {
-    background-color: yellow !important;
+    background-color: red !important;
   }
 
 .list-firma a {

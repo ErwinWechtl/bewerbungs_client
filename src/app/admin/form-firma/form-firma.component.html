@@ -1,8 +1,10 @@
 <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <!--
     <div *ngIf="form.controls.id.getRawValue()!=''">
         <label for="id">ID:</label>
         <input id="id" formControlName="id">
     </div>
+    -->
     
     <label for="name">Name:</label>
     <input id="name" formControlName="name">
@@ -17,7 +19,7 @@
     <input id="email" formControlName="email">
     
     <label for="sonstiges">Sonstiges:</label>
-    <input id="sonstiges" formControlName="sonstiges">
+    <textarea id="sonstiges" formControlName="sonstiges"></textarea>
 
     <button type="submit" [disabled]="form.invalid">Save</button>
     

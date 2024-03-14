@@ -13,7 +13,6 @@ export class CreateFirmaComponent {
   constructor(private firmaService: FirmaService, private router: Router) { }
 
   create(firma: Firma) {
-    alert("Ansprechpartner: " + firma.ansprechPartner);
     this.firmaService.create(firma).subscribe(createdFirma => {
       this.router.navigateByUrl("/bewerbung/list-firma");
      });

@@ -24,7 +24,7 @@ export class ShowFirmaComponent {
     const firmaId = this.activatedRoute.snapshot.paramMap.get('id');
     this.firma$ = firmaService.get(firmaId!);
     this.bewerbungen$ = this.bewerbungService.getAll(firmaId!);
-    this.bewerbungen$.forEach(bewerbungsArray => alert("sentTo: " + bewerbungsArray[0].sentto));
+//    this.bewerbungen$.forEach(bewerbungsArray => alert("sentTo: " + bewerbungsArray[0].sentto));
   }
 
 

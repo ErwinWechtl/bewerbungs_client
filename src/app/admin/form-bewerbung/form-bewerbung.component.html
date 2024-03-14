@@ -1,8 +1,10 @@
 <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <!--
     <div *ngIf="form.controls.id.getRawValue()!=''">
         <label for="id">ID:</label>
         <input id="id" formControlName="id">
     </div>
+    -->
     
     <label for="sentto">sent to:</label>
     <input id="sentto" formControlName="sentto">
@@ -14,13 +16,24 @@
     <input id="letzterKontakt" formControlName="letzterKontakt">
     
     <label for="status">Status:</label>
-    <input id="status" formControlName="status">
-    
-    <label for="anschreiben">Status:</label>
-    <input id="anschreiben" formControlName="status">
+    <label>BEWORBEN</label>
+    <input type="radio" value="BEWORBEN" id="status" name="status" formControlName="status"> 
+    <label>ANTWORT_OFFEN</label>
+    <input type="radio" value="ANTWORT_OFFEN" id="status" name="status" formControlName="status"> 
+    <label>VORSTELL_TERMIN</label>
+    <input type="radio" value="VORSTELL_TERMIN" id="status" name="status" formControlName="status"> 
+    <label>ABSAGE</label>
+    <input type="radio" value="ABSAGE" id="status" name="status" formControlName="status"> 
+    <label>EVIDENZ</label>
+    <input type="radio" value="EVIDENZ" id="status" name="status" formControlName="status"> 
+    <label>SONTIGES</label>
+    <input type="radio" value="SONTIGES" id="status" name="status" formControlName="status"> 
+
+    <label for="anschreiben">Anschreiben:</label>
+    <textarea id="anschreiben" formControlName="anschreiben"></textarea>
     
     <label for="sonstiges">Sonstiges:</label>
-    <input id="sonstiges" formControlName="sonstiges">
+    <textarea id="sonstiges" formControlName="sonstiges"></textarea>
 
     <button type="submit" [disabled]="form.invalid">Save</button>
     

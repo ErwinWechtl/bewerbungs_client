@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Firma } from 'src/app/shared/firma';
+import { FirmaFileService } from 'src/app/shared/firma-file.service';
 import { FirmaService } from 'src/app/shared/firma.service';
 
 @Component({
@@ -10,9 +11,11 @@ import { FirmaService } from 'src/app/shared/firma.service';
 })
 export class CreateFirmaComponent {
 
+//  constructor(private firmaService: FirmaService, private router: Router) { }
   constructor(private firmaService: FirmaService, private router: Router) { }
 
   create(firma: Firma) {
+    alert("create firma " + firma.name);
     this.firmaService.create(firma).subscribe(createdFirma => {
       this.router.navigateByUrl("/bewerbung/list-firma");
      });

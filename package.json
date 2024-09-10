@@ -21,6 +21,7 @@
     "angular-date-value-accessor": "^3.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "write-json-file": "^5.0.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

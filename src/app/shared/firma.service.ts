@@ -24,6 +24,7 @@ export class FirmaService {
   }
 
   create(firma: Firma): Observable<Firma> {
+    alert("create firma in service");
     return this.httpClient.post<Firma>(this.apiUrl, firma);
   }
 
